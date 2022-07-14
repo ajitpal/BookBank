@@ -34,7 +34,7 @@
             zoom: 1
         }
       
-        pdfjsLib.getDocument('https://github.com/ajitpal/BookBank/blob/master/97-things-every-software-architect-should-know.pdf').then((pdf) => {
+        pdfjsLib.getDocument('./books/97-things-every-software-architect-should-know.pdf').then((pdf) => {
       
             myState.pdf = pdf;
             render();
