@@ -30,10 +30,10 @@
 <script src="https://unpkg.com/pdfobject@2.2.8/pdfobject.min.js"></script>
 <script>
 var options = {
-   pdfOpenParams: { pagemode: 'thumbs', fdf: 'https://github.com/ajitpal/BookBank/blob/master/97-things-every-software-architect-should-know.pdf' }
+   pdfOpenParams: { pagemode: 'thumbs', fdf: './book/97-things-every-software-architect-should-know.pdf' }
 };
 
-PDFObject.embed("https://github.com/ajitpal/BookBank/blob/master/97-things-every-software-architect-should-know.pdf", false, options);
+PDFObject.embed("./book/97-things-every-software-architect-should-know.pdf", false, options);
 </script> 
 </body>
 </html>
