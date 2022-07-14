@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My PDF Viewer</title>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
-  </script>
+   
 </head>
 <body>
      <div id="my_pdf_viewer">
@@ -27,37 +25,15 @@
         </div>
     </div>
  
-    <script>
-        var myState = {
-            pdf: null,
-            currentPage: 1,
-            zoom: 1
-        }
-      
-        pdfjsLib.getDocument('./books/97-things-every-software-architect-should-know.pdf').then((pdf) => {
-      
-            myState.pdf = pdf;
-            render();
- 
-        });
- 
-        function render() {
-            myState.pdf.getPage(myState.currentPage).then((page) => {
-          
-                var canvas = document.getElementById("pdf_renderer");
-                var ctx = canvas.getContext('2d');
-      
-                var viewport = page.getViewport(myState.zoom);
- 
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-          
-                page.render({
-                    canvasContext: ctx,
-                    viewport: viewport
-                });
-            });
-        }
-    </script>
+   
+        <!-- insert just before the closing body tag </body> -->
+<script src="https://unpkg.com/pdfobject@2.2.8/pdfobject.min.js"></script>
+<script>
+var options = {
+   pdfOpenParams: { pagemode: 'thumbs', fdf: 'https://github.com/ajitpal/BookBank/blob/master/97-things-every-software-architect-should-know.pdf' }
+};
+
+PDFObject.embed("https://github.com/ajitpal/BookBank/blob/master/97-things-every-software-architect-should-know.pdf", false, options);
+</script> 
 </body>
 </html>
