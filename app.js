@@ -4,7 +4,7 @@ const pdfViewer = document.getElementById('pdf-viewer');
 // Replace with the actual list of PDF files in your repository
 const books = [
     
-    'https://raw.githubusercontent.com/ajitpal/BookBank/master/97-things-every-software-architect-should-know.pdf'',
+    'https://raw.githubusercontent.com/ajitpal/BookBank/master/97-things-every-software-architect-should-know.pdf',
     // Add more book URLs here
 ];
 
