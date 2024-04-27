@@ -8,6 +8,10 @@ const books = [
     // Add more book URLs here
 ];
 
+pdfjsLib.GlobalWorkerOptions.workerSrc = './pdfjs/pdf.worker.mjs';
+
+
+
 function renderBookList() {
     bookList.innerHTML = '';
     books.forEach(book => {
