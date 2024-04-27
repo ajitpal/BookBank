@@ -1,39 +1,25 @@
-<!doctype html>
-  
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My PDF Viewer</title>
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 </head>
 <body>
-     <div id="my_pdf_viewer">
-        <div id="canvas_container">
-            <canvas id="pdf_renderer"></canvas>
-        </div>
- 
-        <div id="navigation_controls">
-            <button id="go_previous">Previous</button>
-            <input id="current_page" value="1" type="number"/>
-            <button id="go_next">Next</button>
-        </div>
- 
-        <div id="zoom_controls">  
-            <button id="zoom_in">+</button>
-            <button id="zoom_out">-</button>
-        </div>
-    </div>
- 
-   
-        <!-- insert just before the closing body tag </body> -->
-<script src="https://unpkg.com/pdfobject@2.2.8/pdfobject.min.js"></script>
-<script>
-var options = {
-   pdfOpenParams: { pagemode: 'thumbs', fdf: './book/97-things-every-software-architect-should-know.pdf' }
-};
-
-PDFObject.embed("./book/97-things-every-software-architect-should-know.pdf", false, options);
-</script> 
+    <header>
+        <h1>My Book Bank</h1>
+    </header>
+    <main>
+        <nav>
+            <ul id="book-list"></ul>
+        </nav>
+        <div id="pdf-viewer"></div>
+    </main>
+    <footer>
+        <p>&copy; BookBank</p>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
