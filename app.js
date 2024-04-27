@@ -8,7 +8,7 @@ const books = [
     // Add more book URLs here
 ];
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = './pdfjs/pdf.worker.mjs';
+
 
 
 
@@ -23,6 +23,7 @@ function renderBookList() {
 }
 
 function renderPDFViewer(pdfUrl) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = './pdfjs/pdf.worker.mjs';
     pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
         const viewer = new pdfjsViewer.PDFViewer({
             container: pdfViewer
