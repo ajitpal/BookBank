@@ -1,63 +1,25 @@
-<!doctype html>
-  
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My PDF Viewer</title>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBank</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.com/libraries/pdf.js"></script>
 </head>
 <body>
-     <div id="my_pdf_viewer">
-        <div id="canvas_container">
-            <canvas id="pdf_renderer"></canvas>
-        </div>
- 
-        <div id="navigation_controls">
-            <button id="go_previous">Previous</button>
-            <input id="current_page" value="1" type="number"/>
-            <button id="go_next">Next</button>
-        </div>
- 
-        <div id="zoom_controls">  
-            <button id="zoom_in">+</button>
-            <button id="zoom_out">-</button>
-        </div>
-    </div>
- 
-    <script>
-        var myState = {
-            pdf: null,
-            currentPage: 1,
-            zoom: 1
-        }
-      
-        pdfjsLib.getDocument('https://github.com/ajitpal/BookBank/blob/master/97-things-every-software-architect-should-know.pdf').then((pdf) => {
-      
-            myState.pdf = pdf;
-            render();
- 
-        });
- 
-        function render() {
-            myState.pdf.getPage(myState.currentPage).then((page) => {
-          
-                var canvas = document.getElementById("pdf_renderer");
-                var ctx = canvas.getContext('2d');
-      
-                var viewport = page.getViewport(myState.zoom);
- 
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-          
-                page.render({
-                    canvasContext: ctx,
-                    viewport: viewport
-                });
-            });
-        }
-    </script>
+    <header>
+        <h1>BookBank</h1>
+    </header>
+    <main>
+        <nav>
+            <ul id="book-list"></ul>
+        </nav>
+        <div id="pdf-viewer"></div>
+    </main>
+    <footer>
+        <p>&copy; BookBank</p>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
