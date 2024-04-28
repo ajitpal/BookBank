@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BookBank/static/css/main.596754bb.css",
+    "main.js": "/BookBank/static/js/main.3c347ff4.js",
+    "index.html": "/BookBank/index.html",
+    "main.596754bb.css.map": "/BookBank/static/css/main.596754bb.css.map",
+    "main.3c347ff4.js.map": "/BookBank/static/js/main.3c347ff4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.596754bb.css",
+    "static/js/main.3c347ff4.js"
+  ]
+}
