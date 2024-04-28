@@ -1,0 +1,85 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-container {
+    margin-right: 20px;
+  }
+  
+  .search-container input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  /* Layout styles */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 130px);
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+  }
+  
+  /* Navigation styles */
+  nav {
+    background-color: #f2f2f2;
+    padding: 20px;
+    overflow-y: auto;
+    max-width: 300px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+  
+  nav li:hover {
+    background-color: #ddd;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* PDF viewer styles */
+  .pdf-viewer {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
